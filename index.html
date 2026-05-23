@@ -22,7 +22,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--bg);color:var(--fg);font-size:15px;line-height:1.7}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(253,252,250,0.96);backdrop-filter:blur(14px);border-bottom:0.5px solid var(--line);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;gap:3rem}
+nav{position:sticky;top:0;z-index:100;background:rgba(253,252,250,0.96);backdrop-filter:blur(14px);border-bottom:0.5px solid var(--line);padding:0 6%;display:flex;align-items:center;justify-content:space-between}
 .logo-img{height:42px;width:auto;object-fit:contain}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{text-decoration:none;color:var(--fg2);font-size:13.5px;font-weight:400;letter-spacing:0.02em;transition:color 0.2s}
@@ -55,7 +55,7 @@ h1 em{font-style:italic;color:var(--luna)}
 /* ABOUT */
 .about-section{background:var(--luna-dd);color:#fff;padding:7rem 6%}
 .about-inner{display:grid;grid-template-columns:360px 1fr;gap:5rem;align-items:start}
-.about-photos{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:1.5rem}
+.about-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem}
 .about-photos img{width:100%;border-radius:3px;object-fit:cover;object-position:center top;display:block}
 .about-photo-main{grid-column:1/-1;max-height:340px;object-fit:cover;object-position:top center}
 .about-photo-sm{height:200px}
@@ -198,405 +198,332 @@ footer{background:var(--luna-dd);color:rgba(255,255,255,0.45);padding:2.2rem 6%;
   .about-stats{grid-template-columns:repeat(2,1fr)}
   .ref-card{padding:2.5rem 1.8rem}
   .ref-text{font-size:15px}
-  .services-grid{grid-template-columns:1fr}
-  .svc-card.featured{border:none}
-  .services-grid{gap:0}
-  .aud-card+.aud-card{margin-top:1rem}
-  .footer-links{flex-direction:column;gap:1rem}
+  .big-quote{font-size:5rem;left:1.5rem}
 }
 </style>
 </head>
 <body>
+
 <!-- NAV -->
 <nav>
-<img src="images/Luna-logo.png" alt="Luna" class="logo-img">
-<ul class="nav-links">
-<li><a href="#hizmetler">Hizmetler</a></li>
-<li><a href="#yaklaşım">Yaklaşım</a></li>
-<li><a href="#referanslar">Referanslar</a></li>
-<li><a href="#iletişim">İletişim</a></li>
-</ul>
-<button class="nav-cta" onclick="document.getElementById('iletişim').scrollIntoView()">Teklif Iste</button>
+  <img src="images/luna-logo.png" alt="Luna Logo" class="logo-img">
+  <ul class="nav-links">
+    <li><a href="#about">Hakkımızda</a></li>
+    <li><a href="#services">Hizmetler</a></li>
+    <li><a href="#webinar">Eğitimler</a></li>
+    <li><a href="#refs">Referanslar</a></li>
+    <li><a href="#contact">İletişim</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Keşif Görüşmesi</button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-<div>
-<div class="hero-eyebrow">
-<span>Hoşgeldiniz</span>
-</div>
-<h1>Örgütlü <em>Gelişim</em> için Stratejik <em>Koçluk</em></h1>
-<p class="hero-desc">Değişim yönetimi ve liderlik gelişimine odaklanarak, kuruluşların potansiyelini maksimum seviyeye çıkarıyorum.</p>
-<div class="hero-btns">
-<button class="btn-primary" onclick="document.getElementById('iletişim').scrollIntoView()">Başlayalım</button>
-<button class="btn-ghost" onclick="document.getElementById('hakkımızda').scrollIntoView()">Daha Fazla Bilgi</button>
-</div>
-<div class="hero-stats">
-<div class="hs-item">
-<div class="val">15+</div>
-<div class="lbl">Yıl Deneyim</div>
-</div>
-<div class="hs-item">
-<div class="val">50+</div>
-<div class="lbl">Başarılı Proje</div>
-</div>
-</div>
-</div>
-<div class="hero-photo-wrap">
-<img src="images/ana-sayfa-melike.jpeg" alt="Luna Consultancy" class="hero-photo">
-<div class="hero-photo-badge">
-<div class="hpb-val">100%</div>
-<div class="hpb-lbl">Memnun Müşteri</div>
-</div>
-</div>
+  <div>
+    <div class="hero-eyebrow"><span>Değişim Yönetimi &amp; Koçluk</span></div>
+    <h1>Dönüşümü<br><em>birlikte</em><br>tasarlıyoruz.</h1>
+    <p class="hero-desc">Agile dönüşümden kurumsal kültür değişimine, executive koçluktan bireysel gelişime kadar her adımda yanınızdayız. İnsanı ve organizasyonu birlikte büyütüyoruz.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Tanışma Görüşmesi Ayarla</button>
+      <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Hizmetleri Keşfet</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hs-item"><div class="val">1000+</div><div class="lbl">Kişiye eğitim</div></div>
+      <div class="hs-item"><div class="val">260+</div><div class="lbl">Saat koçluk</div></div>
+      <div class="hs-item"><div class="val">15+</div><div class="lbl">Org. dönüşüm</div></div>
+    </div>
+  </div>
+  <div class="hero-photo-wrap">
+    <img src="images/ana-sayfa-melike.jpeg" alt="Melike Ak Şahin" class="hero-photo">
+    <div class="hero-photo-badge">
+      <div class="hpb-val">CPCC</div>
+      <div class="hpb-lbl">Sertifikalı Profesyonel Co-active Koç</div>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about-section" id="hakkımızda">
-<div class="about-inner">
-<div class="about-photos">
-<img src="images/ben-kimim-melike.jpg" alt="Melike Kaya" class="about-photo-main">
-</div>
-<div>
-<div class="section-tag">Hakkımızda</div>
-<h2>Melike <em>Kaya</em></h2>
-<div class="about-name-sub">Değişim Yönetimi ve Liderlik Geliştirme Uzmanı</div>
-<div class="about-text">
-<p>15 yılı aşkın danışmanlık deneyimim, farklı endüstrilerde örgütleri başarılı dönüşümler yaşatmıştır. Değişim yönetimi, liderlik gelişimi ve örgütsel dinamikler alanlarında uzmanlaşmış olarak, kurumların en kritik dönemlerinde yanlarında olmaktan gurur duyarım.</p>
-<p>Çalışmalarım, sadece teorik bilgi aktarımıyla sınırlı değil; insanları ve kurumları gerçek değişime hazırlayan, somut sonuçlar üreten bir yaklaşıma dayanan deneyimlerdir.</p>
-</div>
-<div class="about-stats">
-<div class="as-item">
-<div class="as-val">15+</div>
-<div class="as-lbl">Yıl Deneyim</div>
-</div>
-<div class="as-item">
-<div class="as-val">50+</div>
-<div class="as-lbl">Başarılı Proje</div>
-</div>
-<div class="as-item">
-<div class="as-val">500+</div>
-<div class="as-lbl">Mentorlanmış Lider</div>
-</div>
-<div class="as-item">
-<div class="as-val">9/10</div>
-<div class="as-lbl">Müşteri Memnuniyeti</div>
-</div>
-</div>
-<div class="cert-row">
-<span class="cert-badge">Certified Change Manager</span>
-<span class="cert-badge">Executive Coach</span>
-<span class="cert-badge">Örgütsel Psikolog</span>
-</div>
-</div>
-</div>
+<section id="about" class="about-section">
+  <div class="about-inner">
+    <div>
+      <div class="about-photos">
+        <img src="images/BC66DA11-6572-4BAB-B071-3A17099E60E0_1_105_c.jpeg" alt="Photo 1">
+        <img src="images/93DA3880-2C8F-4849-963E-0D9B45ADA1E7_1_105_c.jpeg" alt="Photo 2">
+      </div>
+      <div class="cert-row">
+        <span class="cert-badge">PSM I</span><span class="cert-badge">PSM II</span>
+        <span class="cert-badge">PSPO I</span><span class="cert-badge">PSPO II</span>
+        <span class="cert-badge">PAL I</span><span class="cert-badge">PSF Skills</span>
+        <span class="cert-badge">CPCC</span><span class="cert-badge">Kanban</span>
+        <span class="cert-badge">Management 3.0</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-tag">Neden Luna?</div>
+      <h2>Melike Ak Şahin</h2>
+      <div class="about-name-sub">Kurucu · Danışman &amp; Profesyonel Koç · CPCC</div>
+      <div class="about-text">
+        <p>1985 İstanbul doğumlu Melike Ak Şahin, <strong style="color:#fff">İstanbul Atatürk Fen Lisesi ve Boğaziçi Üniversitesi Endüstri Mühendisliği</strong> mezunudur. Kariyerine Avea'da başlamış, sonrasında Orange Türkiye ve Turkcell'de Senior Product Manager pozisyonlarında yer almıştır.</p>
+        <p>2018'de Garanti BBVA'da Agile Ofis'in kuruluşuna öncülük etmiş, BBVA global nezdinde Agile dönüşüm ülke yöneticiliği görevini üstlenmiştir.</p> 
+        <p>2019–2020'de Koç Holding'te Agile Dönüşüm Lideri olarak topluluk şirketlerinin dönüşüm stratejisini oluşturmuş, Agile koçların yetiştirilmesi için programlar tasarlamıştır.</p>
+        <p>2021–2024 yılları arasında ACM Agile'da savunma, otomotiv, dayanıklı tüketim ve bankacılık gibi sektörlerde danışmanlık yapmış; Boğaziçi Üniversitesi Executive MBA Programında veri analizi ve dijital liderlik derslerinde yer almıştır.</p>
+        <p>2022'de Co-Active Training Institute (CTI) koçluk programını tamamlayarak <strong style="color:#fff">CPCC (Certified Professional Co-active Coach)</strong> unvanını almıştır. Agile ve insan merkezli yönetim alanında 70'ten fazla eğitim ve konferans sunumu gerçekleştirmiştir.</p>
+      </div>
+      <div class="about-stats">
+        <div class="as-item"><div class="as-val">1000+</div><div class="as-lbl">Kişiye eğitim</div></div>
+        <div class="as-item"><div class="as-val">260+</div><div class="as-lbl">Saat profesyonel koçluk</div></div>
+        <div class="as-item"><div class="as-val">100+</div><div class="as-lbl">Agile koç yetiştirme</div></div>
+        <div class="as-item"><div class="as-val">15+</div><div class="as-lbl">Org. Agile dönüşüm</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
-<section class="services-section" id="hizmetler">
-<div class="sec-header">
-<h2 class="sec-title">Hizmetlerim</h2>
-<p class="sec-lead">Kurumunuzun ihtiyacına uygun, özel olarak tasarlanmış çözümler sunuyorum.</p>
-</div>
-<div class="services-grid">
-<div class="svc-card featured">
-<span class="featured-label">Popüler</span>
-<i class="tabler-icon" data-icon="chart-dots">◆</i>
-<div class="svc-num">01</div>
-<div class="svc-title">Değişim Yönetimi Danışmanlığı</div>
-<p class="svc-desc">Büyük ölçekli dönüşümlerde liderlik, uyum ve iş sürekliliği sağlama.</p>
-<div class="svc-tags">
-<span class="tag">Kültür</span>
-<span class="tag">Strateji</span>
-<span class="tag">Operasyon</span>
-</div>
-</div>
-<div class="svc-card">
-<i class="tabler-icon" data-icon="briefcase">◆</i>
-<div class="svc-num">02</div>
-<div class="svc-title">Liderlik Geliştirme Programları</div>
-<p class="svc-desc">Yöneticilerin ve liderlerin kapasite ve etkinliklerini artıran sistemli programlar.</p>
-<div class="svc-tags">
-<span class="tag">Liderlik</span>
-<span class="tag">Koçluk</span>
-<span class="tag">Mentoring</span>
-</div>
-</div>
-<div class="svc-card">
-<i class="tabler-icon" data-icon="users-group">◆</i>
-<div class="svc-num">03</div>
-<div class="svc-title">Örgütsel Gelişim Hizmetleri</div>
-<p class="svc-desc">Kurumunuzun yapısını, kültürünü ve performansını iyileştirme projesi.</p>
-<div class="svc-tags">
-<span class="tag">Yapı</span>
-<span class="tag">Süreç</span>
-<span class="tag">Sistem</span>
-</div>
-</div>
-</div>
+<section id="services" class="services-section">
+  <div class="sec-header">
+    <div>
+      <div class="section-tag">Hizmetler</div>
+      <h2 class="sec-title">Ne yapıyoruz?</h2>
+    </div>
+    <p class="sec-lead">Her müşteriye özel tasarlanan, ölçülebilir sonuçlar üreten hizmetler.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card"><i class="ti ti-refresh svc-icon"></i><div class="svc-num">01</div><div class="svc-title">Agile Dönüşüm</div><div class="svc-desc">Scrum, Kanban ve SAFe çerçevelerinde kurumsal dönüşümü yönetme.</div></div>
+    <div class="svc-card"><i class="ti ti-building-community svc-icon"></i><div class="svc-num">02</div><div class="svc-title">Kurumsal Kültür Dönüşümü</div><div class="svc-desc">Değişime açık, inovasyonu destekleyen kültür oluşturma.</div></div>
+    <div class="svc-card"><i class="ti ti-crown svc-icon"></i><div class="svc-num">03</div><div class="svc-title">Executive Koçluk</div><div class="svc-desc">C-suite ve üst düzey yöneticilere bire bir koçluk hizmetleri.</div></div>
+    <div class="svc-card"><i class="ti ti-heart svc-icon"></i><div class="svc-num">04</div><div class="svc-title">Bireysel Koçluk</div><div class="svc-desc">Kariyer geçişi, öz farkındalık ve kişisel gelişim desteği.</div></div>
+    <div class="svc-card featured"><div class="featured-label">Öne çıkan eğitim</div><i class="ti ti-users svc-icon"></i><div class="svc-num">05</div><div class="svc-title">Koçvari Liderlik Webinarı</div><div class="svc-desc">Koçluk prensiplerini liderlik pratiğine taşıyan interaktif eğitim.</div></div>
+    <div class="svc-card"><i class="ti ti-chart-arrows-vertical svc-icon"></i><div class="svc-num">06</div><div class="svc-title">Agile Koç Yetiştirme</div><div class="svc-desc">Organizasyonunuzda Agile koç kabiliyeti inşa etme programı.</div></div>
+  </div>
 </section>
 
 <!-- WEBINAR -->
-<section class="webinar-section">
-<div class="webinar-inner">
-<div>
-<div class="section-tag">Webinar & Eğitim</div>
-<h2><em>Gelişim</em> için Bilgi Paylaşımı</h2>
-<p class="webinar-desc">Düzenli olarak değişim yönetimi, liderlik ve örgütsel dinamikler üzerine eğitim ve webinarlar düzenlerim.</p>
-<div class="webinar-content">
-<h3>Popüler Konular</h3>
-<ul class="webinar-list">
-<li>Kritikal Değişim Yönetimi Teknikleri</li>
-<li>Hızlı Liderlik Gelişimi</li>
-<li>Dijital Dönüşüm ve İnsan Yönetimi</li>
-<li>Yönetim Danışması ve Stratejik Planlama</li>
-</ul>
-</div>
-</div>
-<div>
-<div class="webinar-content">
-<h3>Kimlere Yönelik?</h3>
-<div class="audience-grid">
-<div class="aud-card">
-<i class="aud-icon">▸</i>
-<div class="aud-text"><strong>C-Level Yöneticiler</strong><br>Stratejik karar vericiler ve dönüşüm liderliği sağlayanlar.</div>
-</div>
-<div class="aud-card">
-<i class="aud-icon">▸</i>
-<div class="aud-text"><strong>Orta Yönetim</strong><br>Değişim uygulamada anahtar rol oynayan yöneticiler.</div>
-</div>
-<div class="aud-card">
-<i class="aud-icon">▸</i>
-<div class="aud-text"><strong>İnsan Kaynakları Profesyonelleri</strong><br>Kurumsal değişimlerde koordinasyon sağlayanlar.</div>
-</div>
-</div>
-</div>
-<div class="webinar-content">
-<h3>Kazanımlar</h3>
-<ul class="kazanim-list">
-<li>Değişim stratejileri hakkında derinlemesine bilgi</li>
-<li>Pratik araçlar ve çerçeveler</li>
-<li>Sektör örnekleri ve başarı hikayeleri</li>
-<li>Networking fırsatları</li>
-</ul>
-</div>
-</div>
+<section id="webinar" class="webinar-section">
+  <div class="webinar-inner">
+    <div>
+      <div class="section-tag">Öne Çıkan Eğitim</div>
+      <h2>Kendime ve Ekibime<br><em>Koçvari Liderlik</em><br>Webinarı</h2>
+      <p class="webinar-desc">Günümüzün dinamiklerinin anlık değiştiği iş dünyasında sürdürülebilir başarı, çalışanların zihinsel esnekliği ve içsel kaynaklarını yönetme becerilerine bağlıdır. Bu webinarda koçluk prensiplerini liderlik pratiğine nasıl taşıyabileceğimizi keşfedeceksiniz.</p>
+      <div class="webinar-cta">
+        <button class="btn-white" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Kayıt Ol</button>
+        <button class="btn-outline-white" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Daha Fazla Bilgi</button>
+      </div>
+    </div>
+    <div class="webinar-content">
+      <h3>İçerik Akışı</h3>
+      <ul class="webinar-list">
+        <li>Koçluk temel kabullerine özet bakış — eylem ve olma hali dengesi</li>
+        <li>Koçluk prensiplerinden günlük hayata taşınabilecekler</li>
+        <li>İçsel liderlik — iç seslerimizin davranış modellerimize etkisi</li>
+        <li>Dayanıklılık ve enerji yönetimi</li>
+        <li>Kendi kendinin lideri olabilmeye dair ipuçları</li>
+        <li>Zor durumlarda farklı perspektifler yakalayabilme</li>
+      </ul>
+      <h3>Hedef Kitle</h3>
+      <div class="audience-grid">
+        <div class="aud-card"><i class="ti ti-users aud-icon"></i><div class="aud-text">Ekiplerine koçluk yaparak potansiyellerini ortaya çıkarmak isteyen yöneticiler</div></div>
+        <div class="aud-card"><i class="ti ti-trending-up aud-icon"></i><div class="aud-text">Liderlik yetkinliklerini erkenden inşa etmek isteyen profesyoneller</div></div>
+        <div class="aud-card"><i class="ti ti-star aud-icon"></i><div class="aud-text">Müşteri ilişkilerinde "yargısız dinleme" ve "doğru soru" teknikleriyle fark yaratmak isteyenler</div></div>
+      </div>
+      <h3>Kazanımlar</h3>
+      <ul class="kazanim-list">
+        <li>Zihinsel Dayanıklılık (Resilience) ve Adaptasyon Kabiliyeti</li>
+        <li>Baskı Altında Bilişsel Esneklik ve Otokontrol</li>
+        <li>Stratejik Odaklı Soru Tasarımı</li>
+        <li>Koçluk Araçlarından Günlük Liderlik Akışına Yararlanabilme</li>
+        <li>İçsel Motivasyon Mimarlığı ve Başarı Tutkusu</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- APPROACH -->
-<section class="approach-section" id="yaklaşım">
-<div class="approach-inner">
-<div>
-<div class="section-tag">Metodoloji</div>
-<h2>Nasıl Çalışıyorum?</h2>
-</div>
-<div class="approach-steps">
-<div class="step-item">
-<div class="step-num">1</div>
-<div class="step-body">
-<h3>Analiz & Tanı</h3>
-<p>Kurumunuzun mevcut durumu, zorlukları ve fırsatlarını derinlemesine analiz ederim.</p>
-</div>
-</div>
-<div class="step-item">
-<div class="step-num">2</div>
-<div class="step-body">
-<h3>Strategi & Planlama</h3>
-<p>Bulgulara dayanan, özel olarak tasarlanmış strateji ve aksiyon planları geliştiririm.</p>
-</div>
-</div>
-<div class="step-item">
-<div class="step-num">3</div>
-<div class="step-body">
-<h3>Uygulama & Mentoring</h3>
-<p>Planı hayata geçirirken, ekibinizin yanında olarak mentoring ve koçluk sağlarım.</p>
-</div>
-</div>
-<div class="step-item">
-<div class="step-num">4</div>
-<div class="step-body">
-<h3>Değerlendirme & Optimizasyon</h3>
-<p>Sonuçları ölçeriz, öğrenmelerinizi yakaladığımız bulguları kuruma entegre ederiz.</p>
-</div>
-</div>
-</div>
-</div>
+<section id="approach" class="approach-section">
+  <div class="approach-inner">
+    <div>
+      <div class="section-tag">Yaklaşımımız</div>
+      <h2 class="sec-title">Nasıl<br>çalışıyoruz?</h2>
+      <p style="margin-top:1.2rem;font-size:14px;color:var(--fg2);line-height:1.8;font-weight:300">Her dönüşüm yolculuğu benzersizdir. Biz hazır kalıplar değil, size özel yol haritası sunuyoruz.</p>
+    </div>
+    <div class="approach-steps">
+      <div class="step-item"><div class="step-num">1</div><div class="step-body"><h3>Dinleme &amp; Anlama</h3><p>Organizasyonunuzun mevcut durumunu ve dönüşüm ihtiyaçlarını derinlemesine anlıyoruz.</p></div></div>
+      <div class="step-item"><div class="step-num">2</div><div class="step-body"><h3>Yol Haritası Tasarımı</h3><p>Bulgulardan hareketle size özel, aşamalı ve ölçülebilir bir dönüşüm yol haritası geliştiriyoruz.</p></div></div>
+      <div class="step-item"><div class="step-num">3</div><div class="step-body"><h3>Birlikte Uygulama</h3><p>Dönüşüm sürecinde ekiplerinizin yanında yer alıyor, eğitim, koçluk ve fasilitasyon desteği sağlıyoruz.</p></div></div>
+      <div class="step-item"><div class="step-num">4</div><div class="step-body"><h3>Ölçüm &amp; Sürdürme</h3><p>İlerlemeyi düzenli metriklerle ölçüyor, kazanımların kalıcı olması için destek veriyoruz.</p></div></div>
+    </div>
+  </div>
 </section>
 
-<!-- REFERANSLAR -->
-<section class="refs-section" id="referanslar">
-<div class="refs-top">
-<h2 class="sec-title">Referanslar</h2>
-<p class="refs-instagram">İnstagram @lunaconsultancy</p>
-</div>
-<div class="birlikte-banner">
-<div>
-<div class="bb-label">Birlikte Çalıştığımız Kurumlar</div>
-<div class="bb-sub">Değişim ve gelişim için ortak yolculuk</div>
-</div>
-<div class="bb-right">
-<div class="bb-count">50+</div>
-<div class="bb-count-lbl">Proje & Organizasyon</div>
-</div>
-</div>
-<div class="carousel-outer">
-<div class="carousel-track">
-<div class="ref-card">
-<div class="big-quote">"</div>
-<p class="ref-text">Melike'nin sunduğu değişim yönetimi hizmetleri, kuruluşumuzun hızlı dijital dönüşümünü başarıyla gerçekleştirmemizi sağladı. Ekibine olan güveni kazanıp, tüm kurumu bir arada tutması büyük başarı.</p>
-<div class="ref-bottom">
-<div class="ref-bar"></div>
-<div class="ref-author">
-<strong>Ahmet Yilmaz</strong>
-<span>CEO, Teknoloji Şirketi</span>
-</div>
-</div>
-</div>
-<div class="ref-card">
-<div class="big-quote">"</div>
-<p class="ref-text">15 yıllık deneyim ve empatik yaklaşımı sayesinde, liderlik yetkinliklerimde muazzam bir artış sağladı. Koçluğu sayesinde daha etkin ve vizyoner bir yönetici oldum.</p>
-<div class="ref-bottom">
-<div class="ref-bar"></div>
-<div class="ref-author">
-<strong>Ayşe Kara</strong>
-<span>Operasyon Direktörü, Finans Kuruluşu</span>
-</div>
-</div>
-</div>
-<div class="ref-card">
-<div class="big-quote">"</div>
-<p class="ref-text">Kurumsal kültür ve değişim yönetiminde sunduğu çözümler, bir yıllık proje sonunda %87 çalışan memnuniyetine ulaştık. Melike, sahadan kopaklık yaşamamış çok nadir danışmanlardandır.</p>
-<div class="ref-bottom">
-<div class="ref-bar"></div>
-<div class="ref-author">
-<strong>Mehmet Şahin</strong>
-<span>İnsan Kaynakları Müdürü, Üretim Firması</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="carousel-nav">
-<div class="carousel-dots">
-<button class="dot active" onclick="showSlide(0)"></button>
-<button class="dot" onclick="showSlide(1)"></button>
-<button class="dot" onclick="showSlide(2)"></button>
-</div>
-<div class="nav-right">
-<span class="ref-counter">1 <span>/ 3</span></span>
-<div class="nav-btns">
-<button class="nav-btn" onclick="moveCarousel(-1)">←</button>
-<button class="nav-btn" onclick="moveCarousel(1)">→</button>
-</div>
-</div>
-</div>
-<div class="kb-hint">Sağ-Sol oklarını veya dokunmatik hareketi kullanabilirsiniz</div>
+<!-- REFS -->
+<section id="refs" class="refs-section">
+  <div class="refs-top">
+    <div>
+      <div class="section-tag">Birlikte Yol Aldıklarımdan Gelenler</div>
+      <h2 class="sec-title">Müşterilerimiz<br>anlatıyor.</h2>
+    </div>
+    <div class="refs-instagram">@coactivecoach_melike</div>
+    <img src="images/referanslar-melike.jpeg" alt="Referanslar Melike" style="height:120px;border-radius:6px;object-fit:cover">
+  </div>
+  <div class="birlikte-banner">
+    <span style="font-size:26px;opacity:0.5">🌱</span>
+    <div><div class="bb-label">Birlikte Yol Aldıklarımdan Gelenler</div><div class="bb-sub">Gerçek koçluk deneyimleri · LinkedIn &amp; Instagram</div></div>
+    <div class="bb-right"><div class="bb-count">7</div><div class="bb-count-lbl">Referans</div></div>
+  </div>
+  <div class="carousel-outer">
+    <div class="carousel-track" id="refTrack">
+      <div class="ref-card"><div class="big-quote">"</div><p class="ref-text">Melike ile çok yeni tanıştık ancak benim için ıssız bir adaya gidecek olsam yanımda götüreceğim 3 şeyin başında geliyor. O bir koç değil aynı zamanda bir mentor, bir yol gösterici. Profesyonel biri ama sonrası için arkadaş olan biri.</p><div class="ref-bottom"><div class="ref-bar"></div><div class="ref-author"><strong>İsmet Serdar Yaşar</strong><span>Kurucu, Dijital Koç</span></div></div></div>
+      <div class="ref-card"><div class="big-quote">"</div><p class="ref-text">Melike'nin koçluktaki başarısının 'canlı kanlı' bir örneği olarak buradayım! Melike ile tanışmamız, kendisinden öğrendiklerimiz benim hayatımı tamamen değiştirdi. Çok kritik kararlar almamda rehberlik etti. Ona sonsuz teşekkürler.</p><div class="ref-bottom"><div class="ref-bar"></div><div class="ref-author"><strong>Utku Baran</strong><span>Consultant, BCG</span></div></div></div>
+      <div class="ref-card"><div class="big-quote">"</div><p class="ref-text">Düşüncelerim arasında kaybolduğum zamanlarda Melike'nin yolculuğuma eşlik etmesi hayatımdaki cesur kararları alabilen, her durum için kendine güvenen biri olma yolunda bana çok yardımcı olmuştur. Başarılar dilerim.</p><div class="ref-bottom"><div class="ref-bar"></div><div class="ref-author"><strong>Dilara Tunç</strong><span>CEO, Enerji Girişimi</span></div></div></div>
+      <div class="ref-card"><div class="big-quote">"</div><p class="ref-text">Kararsız kaldığım, kaybolmuş hissettiğim ya da odağımı kaybettiğim dönemlerde zihnimi düzene sokmama ve önceliklendirme yapabilmeyi öğrettiniz. Yolculuğunuz ve sabırlı rehberliğiniz için çok teşekkür ederim.</p><div class="ref-bottom"><div class="ref-bar"></div><div class="ref-author"><strong>Aslıhan Yüce</strong><span>Kurucusu & CEO, Ayakkabı Girişimi</span></div></div></div>
+      <div class="ref-card"><div class="big-quote">"</div><p class="ref-text">Kariyer koçluğu amacıyla başlayıp, aslında olayın kendimde başladığını ve bittiğini, kendimi anladıkça da işlerin nasıl değişebildiğini gördüm. Gerçek bir koç. Çok teşekkürler Melike!</p><div class="ref-bottom"><div class="ref-bar"></div><div class="ref-author"><strong>Defne Maybek</strong><span>VP, Finans Kuruluşu</span></div></div></div>
+      <div class="ref-card"><div class="big-quote">"</div><p class="ref-text">Benim için gerçekten dönüştürücü bir süreç oldu. Sorduğunuz sorular, verdiğiniz alan ve yolculukta bana eşlik edişiniz sayesinde, gerçekten kendi içerimde müthiş değişimler yaşadım. İçten teşekkürler.</p><div class="ref-bottom"><div class="ref-bar"></div><div class="ref-author"><strong>Ayça Karaçay</strong><span>Direktor, Teknoloji Şirketi</span></div></div></div>
+      <div class="ref-card"><div class="big-quote">"</div><p class="ref-text">Çoğu zaman düşüncelerimde o konuşmalara gidiyorum. Başlarken her şeyi keşfetmeyi, bir sonuca ulaşmayı istiyordum aslında daha da değerli şey kendi kendime daha iyi sorular sorabilmeyi öğrendim. Teşekkürler!</p><div class="ref-bottom"><div class="ref-bar"></div><div class="ref-author"><strong>Can Kıraç</strong><span>İK Müdürü, Perakende</span></div></div></div>
+    </div>
+  </div>
+  <div class="carousel-nav">
+    <div class="carousel-dots" id="refDots"></div>
+    <div class="nav-right">
+      <div class="ref-counter"><span id="refCurNum">1</span> / 7</div>
+      <div class="nav-btns">
+        <button class="nav-btn" id="refPrev" onclick="refMove(-1)">&#8592;</button>
+        <button class="nav-btn" id="refNext" onclick="refMove(1)">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  <div class="kb-hint">&#8592; &#8594; klavye tuşlarını da kullanabilirsiniz</div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact-section" id="iletişim">
-<div>
-<h2 class="sec-title">İletişim</h2>
-<div class="contact-info">
-<div class="ci-row">
-<i class="ci-icon">📧</i>
-<div class="ci-body">
-<strong>E-Posta</strong>
-<span>melike@lunaconsultancy.com.tr</span>
-</div>
-</div>
-<div class="ci-row">
-<i class="ci-icon">📞</i>
-<div class="ci-body">
-<strong>Telefon</strong>
-<span>+90 (555) 123-4567</span>
-</div>
-</div>
-<div class="ci-row">
-<i class="ci-icon">📍</i>
-<div class="ci-body">
-<strong>Konum</strong>
-<span>Istanbul, Türkiye</span>
-</div>
-</div>
-<div class="ci-row">
-<i class="ci-icon">🔗</i>
-<div class="ci-body">
-<strong>LinkedIn</strong>
-<span><a href="https://linkedin.com" style="color:var(--luna);text-decoration:none">linkedin.com/in/melikeaksahin</a></span>
-</div>
-</div>
-</div>
-</div>
-<form class="contact-form" onsubmit="handleFormSubmit(event)">
-<div class="cf-row2">
-<div class="cf-field">
-<label>Ad Soyad</label>
-<input type="text" placeholder="Adınız" required>
-</div>
-<div class="cf-field">
-<label>E-Posta</label>
-<input type="email" placeholder="E-posta adresiniz" required>
-</div>
-</div>
-<div class="cf-field">
-<label>Konu</label>
-<input type="text" placeholder="Mesajınızın konusu" required>
-</div>
-<div class="cf-field">
-<label>Mesaj</label>
-<textarea placeholder="Detaylı mesajınız..." required></textarea>
-</div>
-<button type="submit" class="btn-send">Gönder</button>
-<div class="form-message"></div>
-</form>
+<section id="contact" class="contact-section">
+  <div>
+    <div class="section-tag">İletişim</div>
+    <h2 class="sec-title">Dönüşüme<br>hazır mısınız?</h2>
+    <p style="font-size:15px;color:var(--fg2);margin-top:1rem;line-height:1.8;font-weight:300;max-width:380px">İlk görüşme ücretsiz. Organizasyonunuzun ihtiyaçlarını dinleyelim, birlikte yol haritanızı çizelim.</p>
+    <div class="contact-info">
+      <div class="ci-row"><i class="ti ti-map-pin ci-icon"></i><div class="ci-body"><strong>Adres</strong><span>İstanbul, Ataşehir</span></div></div>
+      <div class="ci-row"><i class="ti ti-mail ci-icon"></i><div class="ci-body"><strong>E-posta</strong><span>info@lunaconsultancy.com</span></div></div>
+      <div class="ci-row"><i class="ti ti-brand-linkedin ci-icon"></i><div class="ci-body"><strong>LinkedIn</strong><span>Luna Consultancy</span></div></div>
+      <div class="ci-row"><i class="ti ti-brand-instagram ci-icon"></i><div class="ci-body"><strong>Instagram</strong><span>@coactivecoach_melike</span></div></div>
+      <div class="ci-row"><i class="ti ti-brand-youtube ci-icon"></i><div class="ci-body"><strong>YouTube</strong><span>@MelikeAkŞahinOfficial</span></div></div>
+    </div>
+  </div>
+  <div>
+    <form class="contact-form" id="contactForm">
+      <div class="cf-row2">
+        <div class="cf-field"><label>Ad Soyad</label><input type="text" name="name" placeholder="Adınız" required></div>
+        <div class="cf-field"><label>Şirket</label><input type="text" name="company" placeholder="Şirket adı" required></div>
+      </div>
+      <div class="cf-field"><label>E-posta</label><input type="email" name="email" placeholder="ornek@sirket.com" required></div>
+      <div class="cf-field">
+        <label>İlgilendiğiniz hizmet</label>
+        <select name="service" required>
+          <option value="">Seçiniz...</option>
+          <option>Agile Dönüşüm</option>
+          <option>Kurumsal Kültür Dönüşümü</option>
+          <option>Executive Koçluk</option>
+          <option>Bireysel Koçluk</option>
+          <option>Koçvari Liderlik Webinarı</option>
+          <option>Agile Koç Yetiştirme</option>
+          <option>Genel Bilgi</option>
+        </select>
+      </div>
+      <div class="cf-field"><label>Mesajınız</label><textarea name="message" placeholder="Projenizi veya ihtiyacınızı kısaca anlatın..." required></textarea></div>
+      <button type="submit" class="btn-send">Mesaj Gönder &#8594;</button>
+      <div class="form-message" id="formMessage"></div>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-<img src="images/Luna-logo.png" alt="Luna" class="footer-logo">
-<div class="footer-links">
-<a href="#hakkımızda">Hakkımızda</a>
-<a href="#hizmetler">Hizmetler</a>
-<a href="#referanslar">Referanslar</a>
-<a href="#iletişim">İletişim</a>
-</div>
-<span style="color:rgba(255,255,255,0.3);font-size:12px">© 2026 Luna Consultancy. Tüm hakları saklıdır.</span>
+  <img src="images/luna-logo.png" alt="Luna Logo" class="footer-logo">
+  <div class="footer-links">
+    <a href="#about">Hakkımızda</a>
+    <a href="#services">Hizmetler</a>
+    <a href="#webinar">Eğitimler</a>
+    <a href="#refs">Referanslar</a>
+    <a href="#contact">İletişim</a>
+  </div>
+  <span style="font-size:12px">© 2025 Luna Yönetim Danışmanlığı Ltd. Şti.</span>
 </footer>
 
 <script>
-let carouselIndex = 0;
-function moveCarousel(n) {
-  const dots = document.querySelectorAll('.dot');
-  const track = document.querySelector('.carousel-track');
-  carouselIndex = (carouselIndex + n + dots.length) % dots.length;
-  showSlide(carouselIndex);
+// Carousel functionality
+const track=document.getElementById('refTrack');
+const dotsWrap=document.getElementById('refDots');
+const cards=track.querySelectorAll('.ref-card');
+const total=cards.length;
+let cur=0;
+
+for(let i=0;i<total;i++){
+  const d=document.createElement('button');
+  d.className='dot'+(i===0?' active':'');
+  d.setAttribute('aria-label','Referans '+(i+1));
+  d.onclick=()=>goTo(i);
+  dotsWrap.appendChild(d);
 }
-function showSlide(n) {
-  const cards = document.querySelectorAll('.ref-card');
-  const dots = document.querySelectorAll('.dot');
-  const counter = document.querySelector('.ref-counter span');
-  const track = document.querySelector('.carousel-track');
-  if (n >= cards.length) carouselIndex = 0;
-  if (n < 0) carouselIndex = cards.length - 1;
-  track.style.transform = `translateX(-${carouselIndex * 100}%)`;
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === carouselIndex);
-  });
-  counter.textContent = `/ ${cards.length}`;
+
+function goTo(p){
+  cur=Math.max(0,Math.min(p,total-1));
+  const w=cards[0].getBoundingClientRect().width;
+  track.style.transform='translateX(-'+(cur*w)+'px)';
+  dotsWrap.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+  document.getElementById('refCurNum').textContent=cur+1;
+  document.getElementById('refPrev').disabled=cur===0;
+  document.getElementById('refNext').disabled=cur===total-1;
 }
-function handleFormSubmit(e) {
+
+function refMove(dir){goTo(cur+dir);}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft') refMove(-1);
+  if(e.key==='ArrowRight') refMove(1);
+});
+
+let startX=0;
+track.addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
+track.addEventListener('touchend',e=>{
+  const diff=startX-e.changedTouches[0].clientX;
+  if(Math.abs(diff)>50) refMove(diff>0?1:-1);
+},{passive:true});
+
+goTo(0);
+
+// Form handling
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const form = e.target;
-  const messageDiv = form.querySelector('.form-message');
-  messageDiv.textContent = 'Mesajınız başarıyla gönderildi. Teşekkürler!';
-  messageDiv.className = 'form-message success';
+  
+  const formData = new FormData(contactForm);
+  const data = {
+    name: formData.get('name'),
+    company: formData.get('company'),
+    email: formData.get('email'),
+    service: formData.get('service'),
+    message: formData.get('message'),
+    timestamp: new Date().toISOString()
+  };
+
+  // Log form data (in production, send to backend)
+  console.log('Form submitted:', data);
+  
+  // Show success message
+  formMessage.textContent = '✓ Mesajınız başarıyla gönderildi. Kısa sürede sizinle iletişime geçeceğiz!';
+  formMessage.classList.remove('error');
+  formMessage.classList.add('success');
+  
+  // Reset form
+  contactForm.reset();
+  
+  // Hide message after 5 seconds
   setTimeout(() => {
-    form.reset();
-    messageDiv.textContent = '';
-    messageDiv.className = 'form-message';
-  }, 3000);
-}
+    formMessage.classList.remove('success');
+    formMessage.textContent = '';
+  }, 5000);
+});
 </script>
 </body>
 </html>
