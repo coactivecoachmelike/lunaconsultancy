@@ -56,7 +56,7 @@ h1 em{font-style:italic;color:var(--luna)}
 .about-section{background:var(--luna-dd);color:#fff;padding:7rem 6%}
 .about-inner{display:grid;grid-template-columns:360px 1fr;gap:5rem;align-items:start}
 .about-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem}
-.about-photos img{width:100%;max-height:200px;object-fit:cover;object-position:center top;border-radius:3px;display:block}
+.about-photos img{width:70%;max-height:100px;object-fit:cover;object-position:center top;border-radius:3px;display:block}
 .about-photo-main{grid-column:1/-1;max-height:340px;object-fit:cover;object-position:top center}
 .about-photo-sm{height:200px}
 .cert-row{display:flex;flex-wrap:wrap;gap:7px}
@@ -129,7 +129,8 @@ h2.sec-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-we
 .step-body p{font-size:13px;color:var(--fg2);line-height:1.7;font-weight:300}
 
 /* REFS */
-.refs-section{padding:7rem 6%;background:var(--bg)}
+.refs-section{padding:7rem 6%;background:var(--luna-ll);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+/*.refs-section{padding:7rem 6%;background:var(--bg)} */
 .refs-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
 .refs-instagram{font-size:12px;color:var(--fg3);font-family:var(--serif);font-style:italic}
 .birlikte-banner{background:var(--luna-dd);color:#fff;padding:1.2rem 2rem;margin-bottom:3rem;display:flex;align-items:center;gap:1.5rem;border-radius:3px}
@@ -224,7 +225,7 @@ footer{background:var(--luna-dd);color:rgba(255,255,255,0.45);padding:2.2rem 6%;
     <h1>Dönüşümü<br><em>birlikte</em><br>tasarlıyoruz.</h1>
     <p class="hero-desc">Agile dönüşümden kurumsal kültür değişimine, executive koçluktan bireysel gelişime kadar her adımda yanınızdayız. İnsanı ve organizasyonu birlikte büyütüyoruz.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="window.location.href='https://calendar.google.com/calendar/appointments/schedules/AcZssZ21wgmcksAd7rJIita_tfIamKoO3NpulMlvSv8EDYcySwacQw7OEY9RxZuYy1Q6j4Fp8nQeUKhB';">Tanışma Görüşmesi Ayarla</button>
+      <button class="btn-primary" onclick="window.open('https://calendar.google.com/calendar/appointments/schedules/AcZssZ21wgmcksAd7rJIita_tfIamKoO3NpulMlvSv8EDYcySwacQw7OEY9RxZuYy1Q6j4Fp8nQeUKhB', '_blank')">Tanışma Görüşmesi Ayarla</button>
       <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Hizmetleri Keşfet</button>
     </div>
     <div class="hero-stats">
@@ -312,7 +313,7 @@ Bilinçli seçimler yaparak potansiyelinizi keşfedeceğiniz, hayatınızın den
 </section>
 
 <!-- WEBINAR -->
-<section id="webinar" class="webinar-section">
+<!--   <section id="webinar" class="webinar-section">
   <div class="webinar-inner">
     <div>
       <div class="section-tag">Öne Çıkan Eğitim</div>
@@ -349,7 +350,7 @@ Bilinçli seçimler yaparak potansiyelinizi keşfedeceğiniz, hayatınızın den
       </ul>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- APPROACH -->
 <section id="approach" class="approach-section">
@@ -442,7 +443,7 @@ bir sonuca ulaşmayı istiyordum. Tüm o görüşmelerimizle bir yere varamadım
     <div class="section-tag">İletişim</div>
     <h2 class="sec-title">Dönüşüme<br>hazır mısınız?</h2>
     <p style="font-size:15px;color:var(--fg2);margin-top:1rem;line-height:1.8;font-weight:300;max-width:380px">İlk görüşme ücretsiz. Organizasyonunuzun ihtiyaçlarını dinleyelim, birlikte yol haritanızı çizelim.</p>
-      <button class="btn-primary" onclick="window.location.href='https://calendar.google.com/calendar/appointments/schedules/AcZssZ21wgmcksAd7rJIita_tfIamKoO3NpulMlvSv8EDYcySwacQw7OEY9RxZuYy1Q6j4Fp8nQeUKhB';">Tanışma Görüşmesi Ayarla</button>
+      <button class="btn-primary" onclick="window.open('https://calendar.google.com/calendar/appointments/schedules/AcZssZ21wgmcksAd7rJIita_tfIamKoO3NpulMlvSv8EDYcySwacQw7OEY9RxZuYy1Q6j4Fp8nQeUKhB', '_blank')">Tanışma Görüşmesi Ayarla</button>
   </div>
   <div>
 
