@@ -137,9 +137,25 @@ h2.sec-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-we
 .step-body h3{font-size:14.5px;font-weight:500;margin-bottom:5px;color:var(--fg)}
 .step-body p{font-size:13px;color:var(--fg2);line-height:1.7;font-weight:300}
 
+/* BLOG */
+.blog-section{padding:7rem 6%;background:var(--bg2)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:0.5rem}
+.blog-card{background:#fff;border:0.5px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s,box-shadow 0.3s}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,0.08)}
+.blog-img-wrap{height:200px;overflow:hidden}
+.blog-img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;transition:transform 0.4s}
+.blog-card:hover .blog-img{transform:scale(1.06)}
+.blog-body{padding:1.6rem 1.5rem 1.8rem;display:flex;flex-direction:column;flex:1}
+.blog-meta{font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--luna);font-weight:500;margin-bottom:0.7rem}
+.blog-title{font-family:var(--serif);font-size:1.35rem;font-weight:500;color:var(--fg);line-height:1.3;margin-bottom:0.7rem}
+.blog-excerpt{font-size:13px;color:var(--fg2);line-height:1.75;font-weight:300;flex:1;margin-bottom:1.1rem}
+.blog-readmore{font-size:12.5px;color:var(--luna);font-weight:500;letter-spacing:0.03em;display:inline-flex;align-items:center;gap:6px}
+.blog-readmore i{font-size:13px;transition:transform 0.2s}
+.blog-card:hover .blog-readmore i{transform:translateX(3px)}
+
 /* REFS */
 
-.refs-section{padding:7rem 6%;background:var(--bg)} 
+.refs-section{padding:7rem 6%;background:var(--bg)}
 .refs-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
 .refs-instagram{font-size:12px;color:var(--fg3);font-family:var(--serif);font-style:italic}
 .refs-inner{padding:2rem 2%;background:var(--luna-ll);display:grid;grid-template-columns:1.25fr 0.5fr;gap:1rem;align-items:start;shrink:1}
@@ -207,12 +223,12 @@ footer{background:var(--luna-dd);color:rgba(255,255,255,0.45);padding:2.2rem 6%;
 
 /* RESPONSIVE  .refs-inner{padding:4rem 2%;background:var(--luna-ll);display:grid;grid-template-columns:1.25fr 0.5fr;gap:1rem;align-items:start;shrink:0}*/
 @media(max-width:860px){
-  .hero,.about-inner,.webinar-inner,.services-grid,.contact-section,.approach-inner{grid-template-columns:1fr}
+  .hero,.about-inner,.webinar-inner,.services-grid,.contact-section,.approach-inner,.blog-grid{grid-template-columns:1fr}
   .hero{min-height:auto;padding:5rem 6% 3rem}
   .hero-photo-wrap{display:none}
   nav .nav-links{display:none}
   .sec-lead{text-align:left}
-  .about-section,.services-section,.refs-section,.approach-section,.contact-section,.webinar-section{padding:4rem 6%}
+  .about-section,.services-section,.refs-section,.approach-section,.contact-section,.webinar-section,.blog-section{padding:4rem 6%}
   .about-stats{grid-template-columns:repeat(2,1fr)}
   .refs-inner{display:grid;grid-template-columns:1fr}
   .ref-card{padding:2rem 2rem}
@@ -234,6 +250,7 @@ footer{background:var(--luna-dd);color:rgba(255,255,255,0.45);padding:2.2rem 6%;
     <li><a href="#about">Hakkımızda</a></li>
     <li><a href="#services">Hizmetler</a></li>
     <li><a href="#approach">Yaklaşımımız</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#refs">Referanslar</a></li>
     <li><a href="#contact">İletişim</a></li>
   </ul>
@@ -397,6 +414,66 @@ Sektörel etkinliklerde, kurumsal zirvelerde veya panellerde; Çeviklik (Agile),
   </div>
 </section>
 
+<!-- BLOG -->
+<section id="blog" class="blog-section">
+  <div class="sec-header">
+    <div>
+      <div class="section-tag">Blog</div>
+      <h2 class="sec-title">Yazılarımız</h2>
+    </div>
+    <p class="sec-lead"><em>Agile dönüşüm, liderlik ve koçluk üzerine düşünceler.</em></p>
+  </div>
+  <div class="blog-grid">
+     <article class="blog-card">
+      <div class="blog-img-wrap"><img src="images/kahverengi-kitaplık.jpeg" alt="Çevik dönüşümde kültür mü, süreç mi önce gelir?" class="blog-img"></div>
+      <div class="blog-body">
+        <div class="blog-meta">Psikolojik Güvenlik</div>
+        <h3 class="blog-title">Psikolojik Güvenlik: Takımların Etkin Çalışabilmesi için En Kritik Faktör</h3>
+        <p class="blog-excerpt">Birleşik Krallık'ta yapılan bir depo araştırması çalışanların yüzde 74'ünün verimlilik hedeflerini kaçırma veya kovulma korkusu ile tuvalete gitmekten kaçınarak şişelerin içine işediğini ortaya koydu.</p>
+        <span class="blog-readmore">Devamını Oku <i class="ti ti-arrow-right"></i></span>
+      </div>
+    <article class="blog-card">
+      <div class="blog-img-wrap"><img src="images/sports-shoes.jpeg" alt="Çevik dönüşümde kültür mü, süreç mi önce gelir?" class="blog-img"></div>
+      <div class="blog-body">
+        <div class="blog-meta">Agile Koçluk</div>
+        <h3 class="blog-title">Agile Koçluk: Uzun İnce Bir Yoldayım</h3>
+        <p class="blog-excerpt">Agile koçluğa doğru bir yolculuk diyorum çünkü “evet şimdi vardım” diyebileceğim bir noktanın olmayacağını şu anki bilincimle daha net söyleyebiliyorum.</p>
+        <span class="blog-readmore">Devamını Oku <i class="ti ti-arrow-right"></i></span>
+      </div>
+    </article>
+    <article class="blog-card">
+      <div class="blog-img-wrap"><img src="images/fire.jpeg" alt="Ülkede çeviklik" class="blog-img"></div>
+      <div class="blog-body">
+        <div class="blog-meta">Agility</div>
+        <h3 class="blog-title">Agility in the Country in the Face of Fires</h3>
+        <p class="blog-excerpt">Like many of us, I was continuously watching the situation and feeling powerless in the face of the fires that began in July and are still ongoing in some areas. It must be because it had a psychological effect on me because I awoke one-night last week around 04.30 a.m., saying “fire corridor”…</p>
+        <span class="blog-readmore">Devamını Oku <i class="ti ti-arrow-right"></i></span>
+      </div>
+    </article>
+    <article class="blog-card">
+      <div class="blog-img-wrap"><img src="images/relentless-pursuit.jpg" alt="Agile kültürü" class="blog-img"></div>
+      <div class="blog-body">
+        <div class="blog-meta">Agile Culture</div>
+        <h3 class="blog-title">Relentless Pursuit</h3>
+        <p class="blog-excerpt">The more I was into reading and experiencing Agile culture, the more I kept noticing messages related to Agile from the books and/or movies. Of course, the effect of selective perception is undeniable as well.
+Years ago, I remember reading Ikigai, The Japanese Secret to a Long and Happy Life, and how I was amazed by the similarity of the key points with Agile such as focus, flow… etc.</p>
+        <span class="blog-readmore">Devamını Oku <i class="ti ti-arrow-right"></i></span>
+      </div>
+    </article>
+  </div>
+
+   <article class="blog-card">
+      <div class="blog-img-wrap"><img src="images/whom.jpeg" alt="Çalışan memnuniyeti" class="blog-img"></div>
+      <div class="blog-body">
+        <div class="blog-meta">Selection</div>
+        <h3 class="blog-title">Who is Selecting Whom?</h3>
+        <p class="blog-excerpt">You may have heard of the term “ Great Resignation “. In 2020, due to fear resulting from the ambiguity that Covid-19 epidemic caused all over the world, people preferred to continue working on their existing jobs which resulted into low resignation rates. Meanwhile, the way we work started to change because of the pandemic. Remote, flexible working… etc. has entered our lives owing to the necessities of Covid-19 precautions</p>
+        <span class="blog-readmore">Devamını Oku <i class="ti ti-arrow-right"></i></span>
+      </div>
+    </article>
+  </div>
+</section>
+
 <!-- REFS -->
 <section id="refs" class="refs-section">
   <div class="refs-top">
@@ -492,6 +569,7 @@ Sektörel etkinliklerde, kurumsal zirvelerde veya panellerde; Çeviklik (Agile),
     <a href="#about">Hakkımızda</a>
     <a href="#services">Hizmetler</a>
     <a href="#webinar">Eğitimler</a>
+    <a href="#blog">Blog</a>
     <a href="#refs">Referanslar</a>
     <a href="#contact">İletişim</a>
   </div>
