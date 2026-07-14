@@ -139,19 +139,24 @@ h2.sec-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-we
 
 /* BLOG */
 .blog-section{padding:7rem 6%;background:var(--bg2)}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:0.5rem}
-.blog-card{background:#fff;border:0.5px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s,box-shadow 0.3s}
-.blog-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,0.08)}
-.blog-img-wrap{height:200px;overflow:hidden}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6px;background:var(--bg3)}
+.blog-card{background:var(--bg);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:background 0.3s;text-decoration:none;color:inherit}
+.blog-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--luna);transform:scaleX(0);transform-origin:left;transition:transform 0.35s}
+.blog-card:hover::after{transform:scaleX(1)}
+.blog-card:hover{background:var(--luna-ll)}
+.blog-img-wrap{height:190px;overflow:hidden}
 .blog-img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;transition:transform 0.4s}
 .blog-card:hover .blog-img{transform:scale(1.06)}
 .blog-body{padding:1.6rem 1.5rem 1.8rem;display:flex;flex-direction:column;flex:1}
 .blog-meta{font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--luna);font-weight:500;margin-bottom:0.7rem}
-.blog-title{font-family:var(--serif);font-size:1.35rem;font-weight:500;color:var(--fg);line-height:1.3;margin-bottom:0.7rem}
-.blog-excerpt{font-size:13px;color:var(--fg2);line-height:1.75;font-weight:300;flex:1;margin-bottom:1.1rem}
+.blog-title{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--fg);line-height:1.3;margin-bottom:0.7rem}
+.blog-excerpt{font-size:13px;color:var(--fg2);line-height:1.75;font-weight:300;flex:1;margin-bottom:1.1rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .blog-readmore{font-size:12.5px;color:var(--luna);font-weight:500;letter-spacing:0.03em;display:inline-flex;align-items:center;gap:6px}
 .blog-readmore i{font-size:13px;transition:transform 0.2s}
 .blog-card:hover .blog-readmore i{transform:translateX(3px)}
+.blog-card-empty{align-items:center;justify-content:center;text-align:center;padding:2.4rem 2rem;background:var(--bg2);border:1px dashed var(--bg3)}
+.blog-card-empty i{font-size:28px;color:var(--fg3);opacity:0.5;margin-bottom:0.8rem}
+.blog-card-empty span{font-size:13px;color:var(--fg3);font-weight:300}
 
 /* REFS */
 
@@ -424,16 +429,17 @@ Sektörel etkinliklerde, kurumsal zirvelerde veya panellerde; Çeviklik (Agile),
     <p class="sec-lead"><em>Agile dönüşüm, liderlik ve koçluk üzerine düşünceler.</em></p>
   </div>
   <div class="blog-grid">
-     <article class="blog-card">
-      <div class="blog-img-wrap"><img src="images/kahverengi-kitaplık.jpeg" alt="Çevik dönüşümde kültür mü, süreç mi önce gelir?" class="blog-img"></div>
+    <article class="blog-card">
+      <div class="blog-img-wrap"><img src="images/kahverengi-kitaplık.jpeg" alt="Psikolojik Güvenlik: Takımların Etkin Çalışabilmesi için En Kritik Faktör" class="blog-img"></div>
       <div class="blog-body">
         <div class="blog-meta">Psikolojik Güvenlik</div>
         <h3 class="blog-title">Psikolojik Güvenlik: Takımların Etkin Çalışabilmesi için En Kritik Faktör</h3>
         <p class="blog-excerpt">Birleşik Krallık'ta yapılan bir depo araştırması çalışanların yüzde 74'ünün verimlilik hedeflerini kaçırma veya kovulma korkusu ile tuvalete gitmekten kaçınarak şişelerin içine işediğini ortaya koydu.</p>
         <span class="blog-readmore">Devamını Oku <i class="ti ti-arrow-right"></i></span>
       </div>
+    </article>
     <article class="blog-card">
-      <div class="blog-img-wrap"><img src="images/sports-shoes.jpeg" alt="Çevik dönüşümde kültür mü, süreç mi önce gelir?" class="blog-img"></div>
+      <div class="blog-img-wrap"><img src="images/sports-shoes.jpeg" alt="Agile Koçluk: Uzun İnce Bir Yoldayım" class="blog-img"></div>
       <div class="blog-body">
         <div class="blog-meta">Agile Koçluk</div>
         <h3 class="blog-title">Agile Koçluk: Uzun İnce Bir Yoldayım</h3>
@@ -442,7 +448,7 @@ Sektörel etkinliklerde, kurumsal zirvelerde veya panellerde; Çeviklik (Agile),
       </div>
     </article>
     <article class="blog-card">
-      <div class="blog-img-wrap"><img src="images/fire.jpeg" alt="Ülkede çeviklik" class="blog-img"></div>
+      <div class="blog-img-wrap"><img src="images/fire.jpeg" alt="Agility in the Country in the Face of Fires" class="blog-img"></div>
       <div class="blog-body">
         <div class="blog-meta">Agility</div>
         <h3 class="blog-title">Agility in the Country in the Face of Fires</h3>
@@ -451,26 +457,27 @@ Sektörel etkinliklerde, kurumsal zirvelerde veya panellerde; Çeviklik (Agile),
       </div>
     </article>
     <article class="blog-card">
-      <div class="blog-img-wrap"><img src="images/relentless-pursuit.jpg" alt="Agile kültürü" class="blog-img"></div>
+      <div class="blog-img-wrap"><img src="images/relentless-pursuit.jpg" alt="Relentless Pursuit" class="blog-img"></div>
       <div class="blog-body">
         <div class="blog-meta">Agile Culture</div>
         <h3 class="blog-title">Relentless Pursuit</h3>
-        <p class="blog-excerpt">The more I was into reading and experiencing Agile culture, the more I kept noticing messages related to Agile from the books and/or movies. Of course, the effect of selective perception is undeniable as well.
-Years ago, I remember reading Ikigai, The Japanese Secret to a Long and Happy Life, and how I was amazed by the similarity of the key points with Agile such as focus, flow… etc.</p>
+        <p class="blog-excerpt">The more I was into reading and experiencing Agile culture, the more I kept noticing messages related to Agile from the books and/or movies. Of course, the effect of selective perception is undeniable as well. Years ago, I remember reading Ikigai, The Japanese Secret to a Long and Happy Life, and how I was amazed by the similarity of the key points with Agile such as focus, flow… etc.</p>
         <span class="blog-readmore">Devamını Oku <i class="ti ti-arrow-right"></i></span>
       </div>
     </article>
-  </div>
-
-   <article class="blog-card">
-      <div class="blog-img-wrap"><img src="images/whom.jpeg" alt="Çalışan memnuniyeti" class="blog-img"></div>
+    <article class="blog-card">
+      <div class="blog-img-wrap"><img src="images/whom.jpeg" alt="Who is Selecting Whom?" class="blog-img"></div>
       <div class="blog-body">
         <div class="blog-meta">Selection</div>
         <h3 class="blog-title">Who is Selecting Whom?</h3>
-        <p class="blog-excerpt">You may have heard of the term “ Great Resignation “. In 2020, due to fear resulting from the ambiguity that Covid-19 epidemic caused all over the world, people preferred to continue working on their existing jobs which resulted into low resignation rates. Meanwhile, the way we work started to change because of the pandemic. Remote, flexible working… etc. has entered our lives owing to the necessities of Covid-19 precautions</p>
+        <p class="blog-excerpt">You may have heard of the term “Great Resignation”. In 2020, due to fear resulting from the ambiguity that Covid-19 epidemic caused all over the world, people preferred to continue working on their existing jobs which resulted into low resignation rates. Meanwhile, the way we work started to change because of the pandemic. Remote, flexible working… etc. has entered our lives owing to the necessities of Covid-19 precautions.</p>
         <span class="blog-readmore">Devamını Oku <i class="ti ti-arrow-right"></i></span>
       </div>
     </article>
+    <div class="blog-card blog-card-empty">
+      <i class="ti ti-pencil-plus"></i>
+      <span>Yeni yazı yakında burada</span>
+    </div>
   </div>
 </section>
 
