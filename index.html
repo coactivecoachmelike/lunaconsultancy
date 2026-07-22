@@ -31,6 +31,8 @@ body{font-family:var(--sans);background:var(--bg);color:var(--fg);font-size:15px
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(253,252,250,0.96);backdrop-filter:blur(14px);border-bottom:0.5px solid var(--line);padding:0 6%;display:flex;align-items:center;align-text:center;justify-content:space-between}
 .logo-img{height:50px;width:auto;object-fit:contain}
+.nav-right{display:flex;align-items:center;gap:1.8rem}
+.partner-badge{height:34px;width:auto;display:block}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{text-decoration:none;color:var(--fg2);font-size:13.5px;font-weight:400;letter-spacing:0.02em;transition:color 0.2s}
 .nav-links a:hover{color:var(--luna)}
@@ -250,15 +252,18 @@ footer{background:var(--luna-dd);color:rgba(255,255,255,0.45);padding:2.2rem 6%;
 <!-- NAV -->
 <nav>
   <img src="images/Luna-logo.png" alt="Luna Logo" class="logo-img">
-  <ul class="nav-links">
-    <li><a href="#main">Anasayfa</a></li> 
-    <li><a href="#about">Hakkımızda</a></li>
-    <li><a href="#services">Hizmetler</a></li>
-    <li><a href="#approach">Yaklaşımımız</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#refs">Referanslar</a></li>
-    <li><a href="#contact">İletişim</a></li>
-  </ul>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#main">Anasayfa</a></li>
+      <li><a href="#about">Hakkımızda</a></li>
+      <li><a href="#services">Hizmetler</a></li>
+      <li><a href="#approach">Yaklaşımımız</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#refs">Referanslar</a></li>
+      <li><a href="#contact">İletişim</a></li>
+    </ul>
+    <img src="images/claude-partner-badge.svg" alt="Claude Partner Network - Registered Partner" class="partner-badge">
+  </div>
 <!-- <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Keşif Görüşmesi</button> -->
 </nav>
 
