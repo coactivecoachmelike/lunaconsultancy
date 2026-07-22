@@ -31,8 +31,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--fg);font-size:15px
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(253,252,250,0.96);backdrop-filter:blur(14px);border-bottom:0.5px solid var(--line);padding:0 6%;display:flex;align-items:center;align-text:center;justify-content:space-between}
 .logo-img{height:50px;width:auto;object-fit:contain}
-.nav-right{display:flex;align-items:center;gap:1.8rem}
-.partner-badge{height:34px;width:auto;display:block}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{text-decoration:none;color:var(--fg2);font-size:13.5px;font-weight:400;letter-spacing:0.02em;transition:color 0.2s}
 .nav-links a:hover{color:var(--luna)}
@@ -57,6 +55,7 @@ h1 em{font-style:italic;color:var(--luna)}
 .hs-item .lbl{font-size:11px;color:var(--fg3);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px}
 .hero-photo-wrap{position:relative}
 .hero-photo{width:100%;max-height:520px;object-fit:cover;object-position:center top;border-radius:3px;display:block}
+.hero-partner-badge{position:absolute;top:-26px;right:-18px;width:46%;max-width:260px;z-index:2;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.12))}
 .hero-photo-badge{position:absolute;bottom:24px;left:-20px;background:#fff;border:0.5px solid var(--line);padding:1rem 1.4rem;border-radius:3px;box-shadow:0 4px 24px rgba(0,0,0,0.08)}
 .hpb-val{font-family:var(--serif);font-size:1.6rem;font-weight:500;color:var(--luna);line-height:1}
 .hpb-lbl{font-size:11px;color:var(--fg3);letter-spacing:0.08em;text-transform:uppercase;margin-top:3px}
@@ -252,18 +251,15 @@ footer{background:var(--luna-dd);color:rgba(255,255,255,0.45);padding:2.2rem 6%;
 <!-- NAV -->
 <nav>
   <img src="images/Luna-logo.png" alt="Luna Logo" class="logo-img">
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#main">Anasayfa</a></li>
-      <li><a href="#about">Hakkımızda</a></li>
-      <li><a href="#services">Hizmetler</a></li>
-      <li><a href="#approach">Yaklaşımımız</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#refs">Referanslar</a></li>
-      <li><a href="#contact">İletişim</a></li>
-    </ul>
-    <img src="images/claude-partner-badge.svg" alt="Claude Partner Network - Registered Partner" class="partner-badge">
-  </div>
+  <ul class="nav-links">
+    <li><a href="#main">Anasayfa</a></li>
+    <li><a href="#about">Hakkımızda</a></li>
+    <li><a href="#services">Hizmetler</a></li>
+    <li><a href="#approach">Yaklaşımımız</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#refs">Referanslar</a></li>
+    <li><a href="#contact">İletişim</a></li>
+  </ul>
 <!-- <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Keşif Görüşmesi</button> -->
 </nav>
 
@@ -285,6 +281,7 @@ footer{background:var(--luna-dd);color:rgba(255,255,255,0.45);padding:2.2rem 6%;
     </div>
   </div>
   <div class="hero-photo-wrap">
+    <img src="images/claude-partner-badge.svg" alt="Claude Partner Network - Registered Partner" class="hero-partner-badge">
     <img src="images/ana-sayfa-melike.jpeg" alt="Melike Ak Şahin" class="hero-photo">
     <div class="hero-photo-badge">
       <div class="hpb-val">Melike Ak Şahin, CPCC</div>
